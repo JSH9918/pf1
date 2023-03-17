@@ -87,7 +87,8 @@ div#title{
   flex-direction: column;
   align-items: center;
   background-image: url(../img/title.jpg);
-  background-position: ;
+  background-size: cover;
+  background-position-y: 50%;
 }
 div#title h2{
    
