@@ -1,0 +1,149 @@
+#people{
+    
+}
+#people nav{
+ 
+}
+#people nav ol{
+  
+  /*! justify-content: space-between; */
+  /*! align-items: center; */
+}
+#people nav ol li{
+ 
+}
+#people nav ol li a{
+  
+}
+#people nav ol li:nth-child(1) a{
+ 
+}
+#people nav ol li:last-child{
+  
+}
+#people nav ol li:nth-child(1){
+
+}
+#people nav ol li:nth-child(n+2){
+}
+#people nav ol li:nth-child(n+3){
+  
+}
+#people section {
+    
+  margin: 50px 0px;
+}
+#people section div.wrap {
+    
+}
+#people section div.wrap h3 {
+    
+  color: #2b8eb6;
+}
+ #people section div.wrap p {
+    
+  line-height: 6;
+}
+#people section div.wrap ul {
+    
+  justify-content: space-between;
+  gap: 30px;
+}
+#people section div.wrap ul li {
+    
+  width: calc(100% / 3 - 60px / 3);
+  position: relative;
+}
+#people section div.wrap ul li:before{
+  content: "";
+  width: 200px;
+  height: 200px;
+  display: block;
+  background: #459efd;
+  border-radius: 50%;
+  margin: 0 auto;
+  box-shadow: 2px 7px 2px #ccc;
+  margin-bottom: 20px;
+}
+#people section div.wrap ul li h4 + span{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+#people section div.wrap ul li h4 + span i{
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+#people section div.wrap ul li h4 {
+  text-align: center;
+}
+#people section div.wrap ul li h4:before{
+  content: "";
+}
+#people section div.wrap ul li h4:after{
+  color: black;
+  font-size: 15px;
+  display: block;
+  margin-top: 10px;
+  }
+#people section div.wrap ul li:nth-child(1) h4:after{
+  content: "창의와 신념";;
+}
+#people section div.wrap ul li:nth-child(2) h4:after{
+  content: "성의와 실천";
+}
+#people section div.wrap ul li:nth-child(3) h4:after{
+  content: "책임과 봉사";
+}
+#people section div.wrap ul li h4 i{
+  font-size: 104px;
+  color: white;
+  position: absolute;
+  left: calc(50% - 29.2px);
+  top: calc(100px - 57px);
+}
+#people section div.wrap ul li:nth-child(2) h4 i{
+  font-size: 104px;
+  color: white;
+  position: absolute;
+  left: calc(50% - 27.5px);
+  top: calc(100px - 57px);
+}
+#people section div.wrap ul li:nth-child(3) h4 i{
+  
+  font-size: 104px;
+  color: white;
+  position: absolute;
+  left: calc(50% - 39px);
+  top: calc(100px - 57px);
+}
+#people section div.wrap ul li dl {
+    
+  margin: 20px;
+  border: 1px solid #8080803b;
+  border-top: 3px solid #459efd;
+}
+#people section div.wrap ul li dl dt {
+    
+  text-align: center;
+  margin: 20px;
+}
+#people section div.wrap ul li dl dd {
+    
+  margin: 10px;
+  padding: 10px;
+}
+#people section div.wrap ul li dl dd:before{
+  content: "ㆍ";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  margin-right: 10px;
+  position: absolute;
+  left: 25px;
+}

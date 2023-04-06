@@ -1,190 +1,51 @@
-body{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 300;
-}
-/* 상단영역 */
-header{
-  width: 1100px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  align-items: center;
-  left: calc(50% - 550px);
-  position: absolute;
-  z-index: 2;
-}
-header h1 a{
-  background-image: url(../img/hj_logo.jpg);
-  width: 230px;
-  height: 25px;
-  display: block;
-  font-size: 0px;
-}
-nav{
-  display: flex;
-  /*! position: relative; */
-}
-ul{
-  display: flex;
-}
-ul.gnb{
-  border-top: 1px solid #a6a4a4;
-  /*! padding-top: 10px; */
-}
-ul.gnb li a{
-  padding: 10px 30px;
-  display: block;
-}
-ul.gnb li a:hover{
-  color:#ff2f2f;
-  border-top: 1px solid blue;
-  background-color: lightblue;
-}
-ul.etcmenu{
-  position: absolute;
-  top: 8px;
-  right: 0px;
-} 
-ul.etcmenu li a{
-  padding:5px 16px;
-  font-size: 14px;
-  display: block;
-}
-ul.etcmenu li:first-child a::after{
-   content: "▼";
-  color: gray;
-  font-size: 7px;  
-  vertical-align: 3px;  /*글자 수직 정렬*/
-  margin-left: 4px;
-}
-ul.etcmenu li a:hover{
-  color:#ed0000;
-}
-/* 타이틀영역 */
-div#title{
-  height: 600px;
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-  background-image: url(../img/title.jpg);
-  background-size: cover;
-  background-position-y: 50%;
-  background-attachment: fixed;
-  position: relative;
-}
-div#title h2{
-  font-size: 50px;
-  /*! margin-bottom: 30px; */
-}
-div#title h2 span{ 
-  font-weight: 500;
-}
-div#title h2::after{
-  content: "";
-  /*! color: black; */
-  display: block;
-  width: 2px;
-  background-color: #666;
-  margin: 25px auto;
-  height: 60px;
-}
-div#title p{
-  margin-bottom: 30px;
-  text-align: center;
-  font-size: 20px;
-  line-height: 1.5;
-}
-div#title a{
-  background-color: green;
-  color: white;
-  text-align: center;
-  width: 100px;
-  height: 40px;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 30px;
-}
-div#title a::before{
-  content: "";
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-bottom-color: green;
-  display: block;
-  position: absolute;
-  top: -35px;
-  border-bottom-width: 35px;
-  border-top-width: 0px;
-}
-div#title a::after{
-  content: "";
-  width: 0;
-  height: 0;
-  border: 50px solid transparent;
-  border-top-color: green;
-  display: block;
-  position: absolute;
-  top: 40px;
-  border-top-width: 35px;
-  border-bottom-width: 0px;
-}
-div#title::before{
-  content:"";
-  display: block;
-  border: 290px solid rgba(253, 125, 75, 0.2);
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  position: absolute;
-  left: 0px;
-  border-bottom-width: 130px;
-  top: 0px;
-  border-right-width: 620px;
-}
-div#title::after{
-  content:"";
-  display: block;
-  border: 290px solid rgba(118, 223, 255, 0.20);
-  border-left-color: transparent;
-  border-top-color: transparent;
-  position: absolute;
-  right: 0px;
-  border-bottom-width: 130px;
-  bottom: 0px;
-  border-right-width: 620px;
-}
+
+
+
 /* 메인영역 */
-main {
- 
- }
-main section#intro {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  display: flex;
-  justify-content: center;
-}
-main section#intro div {
-  width: 1100px;
- }
 main section#intro div h2 {
   display: none;
  }
 main section#intro div ul {
   justify-content: space-between;
+  display: flex;
  }
 main section#intro div ul li {
   width: calc(100% / 4 - 60px / 4);
-  height: 260px;
+  height: 100%;
   background-color: #ccc;
  }
+main section#intro div ul li:nth-child(1){
+}
 main section#intro div ul li a p{
-  
+  display: block;
+  opacity: 0;
+  transition: all 1s;
+  font-size: 13px;
+  margin-top: 20px;
+  line-height: 1.4;
+  z-index: 4;
+}
+main section#intro div ul li a:hover p{
+  opacity: 1;
 }
 main section#intro div ul li a h3{
+  transition: all 1s;
+  z-index: 3;
+}
+main section#intro div ul li a h3::before{
+  content: "";
+  background-color: black;
+  height: 2px;
+  width: 20px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+/* position을 입력하면 margin 0 auto가 먹히지 않음   */
+  transition: all 1s;
+}
+main section#intro div ul li a:hover h3::before{
+  background-color: white;
 }
 main section#intro div ul li:nth-child(1) a{
   background: -webkit-gradient(radial,circle, left top, left bottom, color-stop(0, #dbe2e7), color-stop(1, #8ca2b2));
@@ -230,14 +91,55 @@ main section#intro div ul li a {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  transition: all 1s;
  }
-main section#intro div ul li:hover a{
-  
+main section#intro div ul li a::before{
+  transition: all 1s;
+  z-index: 2;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+main section#intro div ul li:hover a:before{
   transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
   -webkit-transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
-  -moz-transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -moz-transform: scale(0.5) rotate(0)skew(0,0) translate(0,0);
   transform-origin: 50% 50%;
-  background-color: rgba(171, 70, 255, 0.55);
+  opacity: 0.5;
+    
+}
+
+main section#intro div ul li:hover h3{
+  transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -webkit-transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -moz-transform: scale(1) rotate(0)skew(0,0) translate(0,-60px);
+  transform-origin: 50% 50%;
+}
+main section#intro div ul li:hover h3:before{
+  transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -webkit-transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -moz-transform: scale(1) rotate(0)skew(0,0) translate(0,42px);
+  transform-origin: 50% 50%;
+}
+main section#intro div ul li:hover p{
+  transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
+  -webkit-transform: scale(,0.99) rotate(0)skew(0,0) translate(0,0);
+  -moz-transform: scale(1) rotate(0)skew(0,0) translate(0,-60px);
+  transform-origin: 50% 50%;
+}
+main section#intro div ul li a:hover{
+  color: white;
+  box-shadow: 4px 4px 4px gray;
+}
+main section#intro div ul li a:hover::after{
+  background: -webkit-gradient(radial,circle, left top, left bottom, color-stop(0, #6973ff), color-stop(1, #4b32f9));
+	background: -moz-radial-gradient(circle, #6973ff 10%, #4b32f9 100%);
+	background: -webkit-radial-gradient(circle,  #6973ff 10%, #4b32f9 100%);
+	background: -o-radial-gradient(circle,  #6973ff 10%, #4b32f9 100%);
+	background: -ms-radial-gradient(circle,  #6973ff 10%, #4b32f9 100%);
+	background: radial-gradient(circle, #9ea5ff 10%, #4b32f9 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#6973ff', endColorstr='#4b32f9', gradientType=0);
+  opacity: 1;
+  z-index: 1;
 }
 main section#intro div ul li:nth-child(1) a::before{
   content: "";
@@ -247,7 +149,7 @@ main section#intro div ul li:nth-child(1) a::before{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  margin-bottom: 10px;
+  
 }
 main section#intro div ul li:nth-child(2) a::before{
   content: "";
@@ -282,4 +184,155 @@ main section#intro div ul li:nth-child(3) a::before{
 }
 main section#intro div ul li a::after{
   content:"";
+  height: 100%;
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+main section#intro div ul li a:hover::after{
+  /*! content:""; */
+  transition: all 1s;
+}
+main section#society{
+  
+}
+main section#society div{
+  
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  position: relative;
+  background-image: url(../img/main_roll_bg.jpg);
+  background-repeat: no-repeat;
+  background-color: #e6efee;
+  box-sizing: border-box;
+}
+main section#society div>p{
+  
+  position: absolute;
+  top: 65px;
+  font-weight: 300;
+  line-height: 1.5;
+}
+main section#society article a img{
+  
+  width: 100%;
+  position: relative;
+  top: -10px;
+}
+main section#society article a p{
+  
+  margin: 10px.0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 66%;
+  white-space: nowrap;
+}    
+main section#society article a::after{
+  content: "+";
+  position: absolute;
+  right: 0px;
+  bottom: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
+main section#society article{
+  
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+main section#society article a{
+  transition: all 1s;
+  
+}
+main section#society article a:hover{
+  background-color: #ccc;
+}
+main section#society article a figure{
+  
+  height: 130px;
+  overflow: hidden; /*부모영역을 넘처나온 이미지를 숨겨줌*/
+}
+/* 한진뉴스 */
+#news {
+}
+#news .wrap {
+
+ 
+}
+#news .wrap h2 {
+  margin-bottom: 20px;
+ 
+}
+#news .wrap ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  position: relative;
+  line-height: 1.2;
+}
+#news .wrap ul a{
+ 
+}
+#news .wrap ul li:first-child {
+ width: calc(50% - 30px);
+}
+#news .wrap ul li:first-child a {
+ 
+}
+#news .wrap ul li:first-child a figure {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc(50% - 10px)
+ 
+}
+#news .wrap ul li:first-child a figure img {
+ width: 100%
+}
+#news .wrap ul li:first-child a figure figcaption {
+ 
+}
+#news .wrap ul li:first-child a h3 {
+  opacity: 100%;
+  margin: 0px;
+}
+#news .wrap ul li:first-child a p {
+  margin-top:10px;
+ text-overflow: ellipsis;
+  overflow: hidden;
+    height: 60px;
+}
+#news .wrap ul li {
+ width: calc(50% - 30px);
+}
+#news .wrap ul li a {
+
+}
+#news .wrap ul li a h3 {
+ opacity: 70%;
+  margin: 5px 0px;
+ overflow: hidden;
+}
+#news .wrap ul li:nth-child(1) a p{
+ 
+}
+#news .wrap ul li:nth-child(2){
+  margin-top:40px;
+}
+#news .wrap ul li:nth-child(n+2){
+  width:calc(50% - 100px);
+}
+#news .wrap ul li:nth-child(n+2) a {
+  height: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#news .wrap ul li a date{
+ margin-top:10px;
 }
