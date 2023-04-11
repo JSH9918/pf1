@@ -1,0 +1,414 @@
+/* 태블릿 */
+@media screen and (max-width:1200px){
+  header{
+    width: 100%;
+    left: auto;
+    padding: 0px 10px;
+    box-sizing: border-box;
+  }
+  ul.gnb{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    justify-content: center;
+    border:none;
+    
+  }
+  ul.etcmenu{
+    position: static;
+  /* 서브타이틀 */
+  }
+  div#subtitle .wrap button{
+  }
+  div#subtitle .wrap button::after{
+    
+  }
+  /*   메인 */
+  main>section .wrap{
+    padding: 50px 10px !important;
+  }
+  main section#intro{
+    padding: 20px 10px;
+  }
+  main section#intro div ul li{
+    height: 23.63636363636364vw;
+
+  }
+  main section#intro div ul li a{
+    padding: 0px;
+  }
+  main section#intro div ul li a:before{
+  height: 16.35154545454545vw;
+  }
+/*   사회공원 */
+  main section#society{
+    padding: 20px 10px;
+  }
+   main section#society div{
+   background-image: none; 
+  }
+/*   그룹사소식 */
+  #news .wrap ul{
+   display: block;
+   
+  }
+  #news .wrap ul li{
+    
+  }
+  #news .wrap ul li:nth-child(n+2){
+    width:auto;
+  }
+  #news .wrap ul li:first-child{
+    width: auto;
+  }
+  #news .wrap ul li:first-child a{
+   display: grid;
+   grid-template-columns: 50% calc(50% - 30px);
+   column-gap: 30px;
+   
+   grid-template-rows: auto 1fr;
+   align-items: start;
+   align-content: start;
+  }
+  #news .wrap ul li:nth-child(n+2) a{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+  }
+  #news .wrap ul li:nth-child(n+2) a h3{
+    margin-top: 0;
+  }
+  #news .wrap ul li:nth-child(n+2) a date{
+    margin-top: 0;
+    
+    text-align: right;
+  }
+  #news .wrap ul li:first-child a figure{
+    position: static;
+    width: auto;
+    grid-row: 1 / span 2;
+  }
+  #news .wrap ul li:first-child a p{
+    height: 170px;
+  }
+/*   인재경영 */
+  div#subtitle .wrap button:first-child{
+  }
+  div#subtitle .wrap button:last-child{
+   right: 30px;
+  }
+  /*  footer */
+  footer .wrap{
+    padding: 0px 10px;
+  }
+}/*모바일 */
+@media screen and (max-width:760px){
+  /*   헤더 */
+  header{
+  width: 100%;
+  left: 0;
+  }
+   header h1{
+    margin: 0 auto;
+    transform: scale(0.6);
+  }
+  header nav> :not(:last-child){
+    display: none;
+  }
+  .ham{
+    display: block;
+    transform: translateX(-20px);   
+  }
+  /*   서브타이틀 */
+  div#subtitle .wrap{
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  div#subtitle .wrap button{
+   
+  }
+  div#subtitle .wrap button:first-child{
+    transform:translate(-25px,150px);
+    position:static;
+  }
+  div#subtitle .wrap button:last-child{
+    transform:translate(25px,20px);
+    position: static;
+  }
+  div#subtitle .wrap button:first-child::after{
+    display: none;
+  }
+  div#subtitle .wrap button:first-child::before{
+    
+  transform: translateX(8px) translateY(0px) rotate(-135deg);
+  }
+  div#subtitle .wrap button:last-child::after{
+    
+  transform: translateX(-8px) translateY(0px) rotate(45deg);
+  }
+  
+  div#subtitle .wrap button:last-child::before{
+    position: static;
+    display: none;
+  }
+  /*   메인타이틀 */
+  main>nav{
+    
+    display: none;
+  }
+  main>section div {
+    width: auto;
+    padding-top: calc(100px * 0.77) !important;
+    padding-bottom: : calc(100px * 0.77) !important;
+  }
+  main>section div h2{
+    font-size: 20px !important;
+  }
+  /*   회사소개 */
+  #company section .wrap{
+    
+  width: auto;
+  }
+  #company section div strong:nth-child(1){
+    display: block;
+    margin-top:0;
+    padding-bottom: 20px;
+  }
+  #company section div p:nth-child(4){
+    padding-bottom: 30px;
+  }
+  #company section div ul{
+    display: block;
+  }
+  #company section div ul li{
+    display: block;
+    width: auto;
+  }
+  #company section div ul li:not(:first-child){
+    padding-top: 30px;
+  }
+  #company section div ul li:nth-child(n+2){
+    border-top: 2px solid gray;
+    
+  }
+  #company section div ul li:last-child{
+    border-bottom: 2px solid gray;
+  }
+  #company section div:nth-of-type(p){
+    padding-bottom: 30px;
+    margin-bottom: 0px;
+  }
+  #company section div ul li h3{
+    margin-top:10px;
+  }
+  /*   사회공원 */
+  div#title{
+    width: 100%;
+    min-height:440px;
+    height: 100%;
+  }
+  div#title p{
+   
+    transform: scale(0.77);
+    top: calc(-16px * 0.77);
+    margin-bottom:calc(30px * 0.77);
+  }
+  main section#intro div ul{
+   row-gap: 10px;
+   flex-wrap: wrap;
+  }
+  main section#intro div ul li{
+    width: calc(100% / 2 - 10px / 2);
+    height: 46.71052631578947vw;
+  }
+  main section#intro div ul li a{
+    padding: 0px;
+  }
+  main section#intro div ul li a::after{
+    height: 100%;
+    box-sizing: border-box;
+  }
+  main section#intro div ul li a p{
+  }
+  main section#society{
+  padding: 0px 10px;
+  height: auto;
+  }
+  main section#society div{
+    
+  background-position-x: 80%;
+  background-image: none;
+  display: block;
+  }
+  main section#society div > p{
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
+  main section#society article a p{
+    
+  transform: none;
+  }
+  main section#society article a::after{
+    bottom:26px;
+  }
+  #greeting section .wrap strong{
+    display: block;
+  }
+  /*   그룹사소식 */
+  #news .wrap ul{
+    display: block;
+  }
+  #news .wrap ul li{
+    width: auto;
+    
+  }
+  #news .wrap ul li:first-child{
+    
+  width: auto;
+  }
+  #news .wrap ul li:first-child a figure{
+   position: static;
+   width: auto;
+  }
+  #news .wrap ul li:first-child a h3{
+    height: 22px;
+    font-size: 18px;
+  }
+  #news .wrap ul li:first-child a p{
+    height: 50px;
+  }
+  #news .wrap ul li:nth-child(n+2){
+    width: auto;
+  }
+   #news .wrap ul li a{
+    width: auto;
+  }
+  #news .wrap ul li:first-child a{
+    display: block;
+  }
+  #news .wrap ul li:nth-child(n+2) a{
+    display: flex;
+    justify-content: space-between;
+  }
+  #news .wrap ul li:nth-child(2){
+    padding-top: 10px;
+    border-top: 1px solid #ccc;
+    margin-top:20px;
+  }
+  #news .wrap ul li a h3{
+    margin-top: 0;
+    font-size: 12px;
+  }
+  #news .wrap ul li:nth-child(n+2) h3{
+    width: 70%
+  }
+  #news .wrap ul li a date{
+    margin: 0;
+    font-size: 13px;
+  }
+/*   인재경영 */
+  #TalentManagement section .wrap{
+    padding:10px !important;;
+  }
+  #TalentManagement section .wrap ul{ 
+  }
+  #TalentManagement section .wrap ul p{
+    margin-bottom:20px;
+  }
+  #TalentManagement section .wrap ul li{
+    margin: 0;
+  }
+  #TalentManagement section .wrap ul strong{
+    display: block;
+    margin-bottom: 10px;
+  }
+  #TalentManagement section .wrap ul li div{
+    width: auto;
+    padding: 10px !important;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+  }
+  #TalentManagement section .wrap ul li div h3{
+    margin-top:0;
+  }
+  #TalentManagement section .wrap ul li div p:nth-child(n)::before{
+    display: none;
+  }
+  #TalentManagement section .wrap ul li div p{
+    margin-bottom: 10px;
+  }
+  #TalentManagement section .wrap ul li:nth-child(3){
+    border:none;
+    display: block;
+    margin-bottom: 10px;
+  }
+  #TalentManagement section .wrap ul li:nth-child(5){
+  display: block;
+  padding-top: 10px;
+  }
+  #TalentManagement section .wrap ul li:nth-child(5) *{
+  margin: 10px 0;
+  }
+  #TalentManagement section .wrap ul li:nth-child(6){
+  display: block;
+  
+  padding-top: 10px;
+  }
+  #TalentManagement section .wrap ul li:nth-child(6) *{
+  margin: 10px 0;
+  }
+  #TalentManagement section .wrap ul li figure img{
+  width: 100%;
+  }
+  /*   footer */
+  footer .wrap ul{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+    width: 100%;
+  }
+  footer .wrap ul li:not(:last-child){
+  }
+  footer .wrap address{
+    
+  width: 100%;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  }
+  footer .wrap address span{
+  }
+  footer .wrap select{
+    width: auto;
+  }
+  footer .wrap p{
+    margin-top:0px;
+  }
+  /*common */
+  .wrap{
+    padding-left: 10px;
+    padding-right:10px;
+  }
+  .padding30{
+  padding-top: calc(30px * 0.77);
+  padding-bottom: calc(30px * 0.77);
+    transition: all 1s;
+  }
+  .h1{
+    font-size: calc(50px * 0.77);
+  }
+  .h2{
+    font-size: calc(40px * 0.77);
+  }
+  .h3{
+    font-size: calc(23px * 0.77);
+  }
+  .h4{
+    font-size: calc(20px * 0.77);
+  }
+  .block{
+    display: initial;
+  }
+}
