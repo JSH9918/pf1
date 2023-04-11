@@ -5,7 +5,6 @@ body{
   /* 상단영역 */
   header{
     width: 1100px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     height: 100px;
@@ -13,17 +12,21 @@ body{
     left: calc(50% - 550px);
     position: absolute;
     z-index: 2;
+    transition: all 1s;
   }
   header h1 a{
-    background-image: url(../img/hj_logo.jpg);
-    width: 230px;
+    background-image: url(../img/hj_logo.png);
+    width: 200px;
     height: 25px;
     display: block;
     font-size: 0px;
+    background-repeat: no-repeat;
+    background-size: contain;
   }
   header nav{
     display: flex;
     /*! position: relative; */
+    align-items: center;
   }
   ul{
   }
@@ -67,3 +70,21 @@ body{
   ul.etcmenu li a:hover{
     color:#ed0000;
   }
+  .ham{
+    /*! display: block; */
+    font-size: 0;
+    border:none;
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+    border-top:2px solid white;
+    border-bottom: 2px solid white;
+    
+  }
+.ham:before{
+  content: "";
+  width: 20px;
+  display: block;
+  height: 2px;
+  background-color: white;
+}

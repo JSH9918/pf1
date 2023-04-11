@@ -2,6 +2,12 @@
 
 
 /* 메인영역 */
+main section#intro{
+  
+}
+main section#intro div{
+  
+}
 main section#intro div h2 {
   display: none;
  }
@@ -92,12 +98,12 @@ main section#intro div ul li a {
   align-items: center;
   justify-content: center;
   transition: all 1s;
+  padding: 20px 0px;
  }
 main section#intro div ul li a::before{
   transition: all 1s;
   z-index: 2;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-top: 20px;
 }
 main section#intro div ul li:hover a:before{
   transform: scale(1,0.99) rotate(0)skew(0,0) translate(0,0);
@@ -149,7 +155,7 @@ main section#intro div ul li:nth-child(1) a::before{
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  
+  margin-bottom: 10px;
 }
 main section#intro div ul li:nth-child(2) a::before{
   content: "";
@@ -309,7 +315,7 @@ main section#society article a figure{
     height: 60px;
 }
 #news .wrap ul li {
- width: calc(50% - 30px);
+ 
 }
 #news .wrap ul li a {
 

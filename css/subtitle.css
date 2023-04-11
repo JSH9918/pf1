@@ -19,9 +19,9 @@ div#subtitle .wrap {
 div#subtitle .wrap h2 {   
   color: white;
   }
-div#subtitle .wrap button {
+div#subtitle .wrap button:first-child {
   position: absolute;
-  right: 0;
+  left: 40px;
   border: none;
   background-color: transparent;
   color: white;
@@ -31,7 +31,43 @@ div#subtitle .wrap button {
   align-items: center;
   opacity: 0.7;
   }
-div#subtitle .wrap button::before{
+div#subtitle .wrap button:last-child {
+  position: absolute;
+  right: 40px;
+  border: none;
+  background-color: transparent;
+  color: white;
+  width: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0.7;
+}
+div#subtitle .wrap button:first-child::before{
+  content: "";
+  border: 2px solid white;
+  border-bottom-color: white;
+  border-left-color: white;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  transform: translateX(-11px) translateY(2px) rotate(-135deg);
+}
+div#subtitle .wrap button:first-child::after{
+  content: "";
+  border:3px solid #fff;
+  width: 30px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  left:-25px;
+  top: calc((100% - 33px)/ 2);
+  border-radius: 50%;
+}
+
+div#subtitle .wrap button:last-child::before{
   content: "";
   border:3px solid #fff;
   width: 30px;
@@ -42,7 +78,7 @@ div#subtitle .wrap button::before{
   top: calc((100% - 33px)/ 2);
   border-radius: 50%;
 }
-div#subtitle .wrap button::after{
+div#subtitle .wrap button:last-child::after{
   content: "";
   border: 2px solid white;
   border-bottom-color: white;

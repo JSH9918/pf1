@@ -1,0 +1,114 @@
+#TalentManagement {
+}
+#TalentManagement section {
+}
+#TalentManagement section .wrap {
+}
+#TalentManagement section .wrap ul {
+ 
+}
+#TalentManagement section .wrap ul strong {
+  margin-bottom: 30px;
+  color: #2e90b7;
+}
+#TalentManagement section .wrap ul p {
+}
+#TalentManagement section .wrap ul li {
+  margin: 30px 0px;
+}
+
+#TalentManagement section .wrap ul li:nth-child(3){
+  border: 1px solid #333;
+  
+  margin-bottom: 100px;
+}
+#TalentManagement section .wrap ul li:nth-child(5){
+    
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 3fr 1fr;
+  padding-top: 30px;
+  position: relative;
+}
+#TalentManagement section .wrap ul li:nth-child(5):before{
+  content: "";
+  width: 500px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+}
+#TalentManagement section .wrap ul li:nth-child(6){
+    
+  display: grid;
+  grid-template-columns: 30% 70%;
+  padding-top:30px;
+  position: relative;
+}
+#TalentManagement section .wrap ul li:nth-child(6):before{
+  content: "";
+  width: 500px;
+  height: 1px;
+  background-color: black;
+  position: absolute;
+}
+#TalentManagement section .wrap ul li figure {
+}
+#TalentManagement section .wrap ul li figure img {
+}
+#TalentManagement section .wrap ul li figure figcaption {
+}
+#TalentManagement section .wrap ul li div{
+  
+  margin: auto auto;
+}
+#TalentManagement section .wrap ul li div h3{
+  
+  margin: 20px 0;
+}
+#TalentManagement section .wrap ul li div p{
+  
+  position: relative;
+  margin-bottom: 20px;
+}
+#TalentManagement section .wrap ul li div p:nth-child(2):before{
+  content:".";
+  position: absolute;
+  left: -10px;
+  bottom: 2px;
+  font-size: 30px;
+}
+#TalentManagement section .wrap ul li div p:nth-child(3):before{
+  content:".";
+  position: absolute;
+  left: -10px;
+  bottom: 15px;
+  font-size: 30px;
+}
+#TalentManagement section .wrap ul li div p:nth-child(4):before{
+  content:".";
+  position: absolute;
+  left: -10px;
+  bottom: 15px;
+  font-size: 30px;
+}
+#TalentManagement section .wrap ul li div p:nth-child(5):before{
+  content:".";
+  position: absolute;
+  left: -10px;
+  bottom: 2px;
+  font-size: 30px;
+}
+#TalentManagement section .wrap ul li div p:nth-child(6):before{
+  content:".";
+  position: absolute;
+  left: -10px;
+  bottom: 15px;
+  font-size: 30px;
+}
+#TalentManagement section .wrap ul li h3 {
+}
+#TalentManagement section .wrap ul li p {
+}
+#TalentManagement section .wrap ul li h2 {
+  grid-row: 1 / span 2;
+}
