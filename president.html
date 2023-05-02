@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>(주)한진칼-인사말</title>
+    <title>PF1-(주)한진칼-인사말</title>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,28 +13,87 @@
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/subtitle.css">
-    <link rel="stylesheet" href="css/people.css">
+    <link rel="stylesheet" href="css/president.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-std.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
-    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="css/response.css">
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.4.js"></script>
     <script type="text/javascript" src="js/submenu.js"></script>
+    <script type="text/javascript" src="js/president.js"></script>
+    <script type="text/javascript">
+        // $(document).ready(function(){
+        $(function(){ 
+            $(".gallery").wrap("<div class='wgallery'></div>");  
+            $(".wgallery").prepend('<figure><img src="img/jo1.jpg" alt=""></figure>');
+            $(".wgallery+h2,.wgallery+h2~p").wrapAll('<div class="wtext"></div>');
+            // 해당태그를 div로 묵고 div에 wtext 클래스를 추가해라
+            $(".wgallery,.wtext").wrapAll('<div class="wwgallery flex"></div>');
+            $("#president section .wrap ul.gallery li:nth-child(1)").addClass("blueborder");
+            let n; //변수(그릇) 
+            let w;
+            $("#president section .wrap ul.gallery li a").click(function(){
+
+                $(this).parent().addClass("blueborder");
+                $(this).parent().siblings().removeClass("blueborder");
+
+                n=$(this).parent().index()+1
+                $(".wgallery figure img").attr("src","img/jo"+n+".jpg");
+                return false;
+                
+                });
+            // $("#president section .wrap ul.career li:nth-child(1)").addClass("nonebottom blue");
+            // $("#president section .wrap ul.career li").click(function(){
+            //     // $(this).parent().addClass("nonebottom blue");
+            //     // $(this).parent().siblings().removeClass("nonebottom blue");
+            //     n=$(this).parent().index()+1
+            //     $("#president section .wrap ul.career li:nth-child("+n+") a").addClass("nonebottom blue");
+            //     $("#president section .wrap ul.career li:nth-child("+n+") a").siblings().removeClass("nonebottom blue");
+            //     return false;
+            // })
+            $("#president section .wrap ul.career li:nth-child(1)").addClass("nonebottom blue").children().addClass("blue");
+            $("#president section .wrap ul.year > li:nth-child(1)").show().siblings().hide();
+            $("#president section .wrap ul.career li a").click(function(){
+                $(this).parent().addClass("nonebottom blue");
+                $(this).parent().siblings().removeClass("nonebottom blue");
+                n=$(this).parent().index()+1
+                $("#president section .wrap ul.career li:nth-child("+n+")").children().addClass("blue").parent().siblings().children().removeClass("blue");
+                $("#president section .wrap ul.year > li:nth-child("+n+")").show().siblings().hide();
+                return false;
+            });
+            
+            $("#president section .wrap .wwgallery .wgallery figure img").click(function(){
+                $(".popupimg").remove(".popupimg")
+                $(".wgallery").append("<div class='popupimg'></div>");
+                
+                $(this).clone().appendTo(".popupimg").hide().fadeIn(500);
+                
+                $(".popupimg").append("<button class='close'>닫기</button>");
+
+                $(".close").click(function(){
+                    $(".popupimg").fadeOut();
+                })   
+            });
+
+            
+            $("ul.etcmenu li:nth-child(2) a").text("영문");
+        });
+    </script>
 </head>
 <body>
-    <!-- 상단영역 마크업주석 -->
+    <!-- 상단영역 마크업주석  -->
     <header>
-        <h1><a href="main.html" > HANJIN KAL</a> </h1>
+        <h1><a href="main.html">HANJIN KAL</a></h1>
         <nav>
             <ul class="gnb">
-                <li><h2><a href="#">한진그룹</a></h2>
+                <li>
+                    <h2><a href="#">한진그룹</a></h2>
                     <ul class="submenu flex">
                         <li>
                             <h3 class="h5 blue"><a href="greeting.html" class="block">인사말씀</a></h3>
                             <ul class="sublist">
-                                <li><a href="greeting.html" class="block"> 인사말씀</a></li>
-                                <li class="opacity30"><a href="" class="block"> 경영철학</a></li>
+                                <li><a href="greeting.html" class="block">인사말씀</a></li>
+                                <li class="opacity30"><a href="" class="block">경영철학 </a></li>
                             </ul>
                         </li>
                         <li class="opacity30">
@@ -43,12 +102,12 @@
                                 <li><a href="" class="block">한진70년</a></li>
                             </ul>
                         </li>
-                        <li class="opacity30">
-                            <h3 class="h5 blue"><a href="" class="block">창업회장관</a></h3>
+                        <li>
+                            <h3 class="h5 blue"><a href="president.html" class="block">창업회장관</a></h3>
                             <ul class="sublist">
-                                <li><a href="" class="block">정석 조중훈</a></li>
-                                <li><a href="" class="block">사업은 예술이다</a></li>
-                                <li><a href="" class="block">전기 다운로드</a></li>
+                                <li><a href="president.html" class="block">정석 조중훈</a></li>
+                                <li class="opacity30"><a href="" class="block">사업은 예술이다</a></li>
+                                <li class="opacity30"><a href="" class="block">전기 다운로드</a></li>
                             </ul>
                         </li>
                         <li class="opacity30">
@@ -72,7 +131,8 @@
                         </li>
                     </ul>
                 </li>
-                <li><h2><a href="#">한진칼</a></h2>
+                <li>
+                    <h2><a href="#">한진칼</a></h2>
                     <ul class="submenu flex">
                         <li>
                             <h3 class="h5 blue"><a href="company.html" class="block">회사 소개</a></h3>
@@ -93,10 +153,11 @@
                         </li>
                     </ul>
                 </li>
-                <li><h2><a href="#">ESG경영</a></h2>
+                <li>
+                    <h2><a href="#">ESG경영</a></h2>
                     <ul class="submenu flex">
                         <li>
-                            <h3 class="h5 blue"><a href="" class="block">지속가능경영</a></h3>
+                            <h3 class="h5 blue"><a href="governance.html" class="block">지속가능경영</a></h3>
                             <ul class="sublist">
                                 <li class="opacity30"><a href="" class="block">윤리경영</a></li>
                                 <li><a href="TalentManagement.html" class="block">인재경영</a></li>
@@ -104,7 +165,7 @@
                             </ul>
                         </li>
                         <li>
-                            <h3 class="h5 blue"><a href="governance.html" class="block">기업지배구조</a></h3>
+                            <h3 class="h5 blue"><a href="" class="block">기업지배구조</a></h3>
                             <ul class="sublist">
                                 <li><a href="governance.html" class="block">기업지배구조헌장</a></li>
                                 <li class="opacity30"><a href="" class="block">이사회</a></li>
@@ -126,15 +187,15 @@
                         <li class="opacity30">
                             <h3 class="h5 blue"><a href="" class="block">환경경영</a></h3>
                             <ul class="sublist">
-                                <li><a href="" class="block">기후변화</a></li>
-                                <li><a href="" class="block">대응 친환경</a></li>
-                                <li><a href="" class="block">경영</a></li>
+                                <li><a href="" class="block">기후변화 대응</a></li>
+                                <li><a href="" class="block">친환경 경영</a></li>
                                 <li><a href="" class="block">활동소식</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><h2><a href="#">한진인</a></h2>
+                <li>
+                    <h2><a href="#">한진인</a></h2>
                     <ul class="submenu flex">
                         <li>
                             <h3 class="h5 blue"><a href="people.html" class="block">한진의 인재상</a></h3>
@@ -152,8 +213,10 @@
                             <h3 class="h5 blue"><a href="" class="block">채용정보</a></h3>
                         </li>
                     </ul>
+
                 </li>
-                <li><h2><a href="#">홍보센타</a></h2>
+                <li>
+                    <h2><a href="#">홍보센타</a></h2>
                     <ul class="submenu flex">
                         <li>
                             <h3 class="h5 blue"><a href="groupnews.html" class="block">그룹사소식</a></h3>
@@ -177,69 +240,100 @@
             <ul class="etcmenu">
                 <li><a href="#">전체메뉴</a></li>
                 <li><a href="#">ENGLISH</a></li>
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass" style="color: #3b7ae8;"></i>
             </ul>
-            <button class="hide ham">전체메뉴</button>
         </nav>
     </header>
+    <!-- 서브타이틀 -->
     <div id="subtitle">
         <div class="wrap flex">
-            <h2 class="h1 bold">한진의 인재상</h2>
-            <button class="h3">인재육성</button>
+            <h2 class="h1 bold">정석 조중훈</h2>
+            <button class="h3">사업은 예술이다</button>
         </div>
     </div>
-    <main id="people">
+    <!-- 메인영역 -->
+    <main id="president">
         <nav class="breadcrumbl">
             <ol class="wrap flex">
                 <li class="p"><a href="main.html"> Home </a></li>
-                <li class="p"><a href="greeting.html"> 한진인 </a></li>
-                <li class="p">한진의 인재상</li>
+                <li class="p"><a href="greeting.html"> 한진그룹 </a></li>
+                <li class="p"><a href="">창업회장관</a></li>
+                <li class="p">정석조정훈</li>
             </ol>
         </nav>
-        <section>
+        <section class="president padding100">
             <div class="wrap">
-                <h3 class="h3 bold">한진이 바라는 인재상</h3>
-                <p class="p ccc">세계적인 종합물류기업으로 성장해온 한진은 그룹의 비전을 실현할 인재를 원하고 있습니다</p>
-                <ul class="flex">
-                    <li>
-                        <h4 class="h4 margin30 blue"><i class="ion-ios-lightbulb-outline"></i>창조인</h4>
-                        <span class="dot"><i></i><i></i></span>
-                        <dl>
-                            <dt class="bold">창의와 신념을 가진 창조인</dt>
-                            <dd class="ccc">세계화 시대를 리드할 진취적이고 참신한 감각을 지닌 인재</dd>
-                            <dd class="ccc">자기계발을 위해 끊임없이 노력하는 인재</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <h4 class="h4 margin30 blue"><i class="ion-android-walk"></i>행동인</h4>
-                        <span class="dot"><i></i><i></i></span>
-                        <dl>
-                            <dt class="bold">성의와 실천이 몸에 밴 행동인</dt>
-                            <dd class="ccc">좌절하지 않는 불굴의 의지를 지닌 인재</dd>
-                            <dd class="ccc">예의를 존중하고 겸손하며 타인을 배려할 줄 아는 인재</dd>
-                        </dl>
-                    </li>
-                    <li>
-                        <h4 class="h4 margin30 blue"><i class="ion-ios-body"></i>자유인</h4>
-                        <span class="dot"><i></i><i></i></span>
-                        <dl>
-                            <dt class="bold">책임과 봉사정신이 투철한 자유인</dt>
-                            <dd class="ccc">자율적 사고의 행동을 바탕으로 최고가 되기 위한 프로정신을 지닌 인재</dd>
-                            <dd class="ccc">조직과 사회에 대한 봉사에 자발적으로 헌신하는 인재</dd>
-                        </dl>
-                    </li>
+                <ul class="nav flex h4">
+                    <li><a href="" class="blue"> <span class="block"></span> 정석 조중훈</a></li>
+                    <li><a href=""><span class="block"></span>사업은 예술이다</a></li>
+                    <li><a href=""><span class="block"></span>전기 다운로드</a></li>
                 </ul>
+                <ul class="gallery">
+                    <li><a href=""><img src="img/jo1.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/jo2.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/jo3.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/jo4.jpg" alt=""></a></li>
+                    <li><a href=""><img src="img/jo5.jpg" alt=""></a></li>
+                </ul>
+                <h2 class="h2 bold">정석<span class="h1">조중훈</span> 창업회장</h2>
+                <p class="p">출생 : 1920년 2월 11일(음력)<span class="block"></span>지역 : 서울특별시 서대문구 미근동</p>
+                <p class="p"><strong class="blue block">아호(雅號): 정석(靜石)</strong>
+                    한번 마음먹으면 끝까지 해내고야 마는 성격인데다<span class="block"></span>
+                    기계를 좋아해서 어린 시절 집안을 분주히 돌아다니며<span class="block"></span>
+                    이것저것 뚝딱거리고 어질러 놓기를 좋아했던<span class="block"></span>
+                    조회장에게 動과 靜이 조화를 이룬 사람이 되라는<span class="block"></span>
+                    뜻에서 선친께서 지어주심
+                </p>
+                <ul class="career flex">
+                    <li class="bordera"><a href="" class="h3 flex">학력 및 학위</a></li>
+                    <li class="bordera"><a href="" class="h3 flex">연보</a></li>
+                    <li class="bordera"><a href="" class="h3 flex">수상 및 수훈</a></li>
+                </ul>
+                <ul class="year">
+                    <li>
+                        <h3 class="hide ">학력 및 학위</h3>
+                        <ol>
+                            <li><strong class="bold">1995 04</strong>월명예공학박사 (한국해양대학)</li>
+                            <li><strong class="bold">1987 02</strong>월명예경영학박사 (블란서 루앙대학)</li>
+                            <li><strong class="bold">1972 05</strong>월명예철학박사 (자유중국 문화학원)</li>
+                            <li><strong class="bold">1967 08</strong>월고려대학교 경영대학원 졸업</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3 class="hide h3">연보</h3>
+                        <ol>
+                            <li><strong class="bold">2002 11</strong>타계(17일)</li>
+                            <li><strong class="bold">1998 08</strong>정석비행장 완공</li>
+                            <li><strong class="bold">1998 03</strong>거양해운 인수</li>
+                            <li><strong class="bold">1994 07</strong>한진지리정보㈜ 설립</li>
+                            <li><strong class="bold">1991 05</strong>코리아타코마조선공업 인수</li>
+                            <li><strong class="bold">1991 02</strong>21세기 한국연구재단 설립</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <h3 class="hide h3">수상 및 수훈</h3>
+                        <ol>
+                            <li><strong class="bold">2002 11</strong>국민훈장무궁화장</li>
+                            <li><strong class="bold">1998 04</strong>월독일연방공화국십자공로대훈장</li>
+                            <li><strong class="bold">1996 11</strong>월불란서오르드르나쇼날뒤 메리트훈장</li>
+                            <li><strong class="bold">1996 04</strong>월회고록 ‘내가 걸어온 길’ 출간</li>
+                            <li><strong class="bold">1996 03</strong>월네덜란드명예훈장(Royal Distribution-Orange Nassau)</li>
+                            <li><strong class="bold">1992 08</strong>월몽골공화국북극성훈장</li>
+                        </ol>
+                    </li>
+                </ul>           
             </div>
         </section>
     </main>
+    <!-- 하단영역 -->
     <footer class="padding30">
         <div class="wrap flex">
             <ul>
                 <li><a href="">법적고지</a></li>
-                <li><a href=""></a>이메일주소무단수집거부</li>
+                <li><a href="">이메일주소무단수집거부</a></li>
                 <li><a href="">사이트맵</a></li>
             </ul>
-            <address>서울특별시 중구 서소문로 117 <span class="block"></span> Tel. 02-726-6166</address>
+            <address>서울특별시 중구 서소문로 117 <span class="block"></span> Tel. 02-726-6166 </address>
             <select name="" id="">
                 <option value="">계열사 바로가기</option>
                 <option value="" selected="selected">한진칼</option>
@@ -247,7 +341,7 @@
             </select>
             <p class="p ccc">COPYRIGHT HANJIN KAL. All Rights Reserved.</p>
         </div>
-</footer>
+    </footer>
+    
 </body>
-
 </html>
