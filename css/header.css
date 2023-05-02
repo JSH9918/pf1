@@ -1,18 +1,21 @@
-body{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-weight: 300;
-  }
+
   /* 상단영역 */
   header{
-    width: 1100px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     height: 100px;
     align-items: center;
-    left: calc(50% - 550px);
+    left: 0;
     position: absolute;
     z-index: 2;
     transition: all 1s;
+    margin: 0 auto;
+    padding: 0 calc((100% - 1100px) / 2);
+    box-sizing: border-box;
+  }
+  header h1{
+
   }
   header h1 a{
     background-image: url(../img/hj_logo.png);
@@ -32,28 +35,145 @@ body{
   }
   ul.gnb{
     border-top: 1px solid #7777778c;
-    /*! padding-top: 10px; */
     display: flex;
   }
-  ul.gnb li{
+  ul.gnb>li{
     margin-top: -1px;
      
   }
-  ul.gnb li a{
+  ul.gnb>li h2 a{
     padding: 10px 30px;
     display: block;
     border-top: 2px solid transparent;
     transition: border 1s;
+    position: relative;
+    z-index: 10;
+    box-sizing: border-box;
   }
-  ul.gnb li a:hover{
+  ul.gnb > li:not(:first-child) ul.submenu{
+      display: none;
+   }
+
+  ul.gnb>li h2 a:hover{
     color:#ff2f2f;
     border-top: 2px solid blue;
+  }
+  /* 서브메뉴 */
+  ul.submenu{
+  position: absolute;
+  left: 0;
+  background-color: rgba(255,255,255,1);
+  column-gap: 50px;
+  letter-spacing: 1px;
+  line-height: 2;
+  height: auto;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: end;
+  padding: 30px calc((100% - 1100px) / 2);
+  top: 0;
+  padding-top: 100px;
+  display: none;
+  }
+   li:nth-child(2) ul.submenu{
+    justify-content: center;
+  }
+    .submenuani{
+    animation-name:submenuani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    }
+    @keyframes submenuani{
+    0%{
+      transform: translateY(-30px);
+      
+    }
+    100%{
+      transform: translateY(0px);
+     
+    }
+  }
+  .submenuup{
+    display: flex !important;;
+    animation-name: submenuup;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+   @keyframes submenuup{
+     0%{
+       transform: translateY(0px)scale(1);
+       opacity: 1;
+       
+     }
+     99%{
+       transform: translate(0) scale(1);
+     }
+     100%{
+       transform: translateY(0) scale(0);
+       opacity: 0;
+     }
+  }
+  .submenushow{
+     display: flex !important;
+  }
+ 
+  ul.submenu > .close{
+    position: absolute;
+    bottom: 15px;
+    right: calc((100% - 1100px) / 2);
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ccc;
+    font-size: 0;
+    background-image: url(../img/close.svg);
+    background-size: 70%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  ul.gnb>li:not(:first-child) ul.submenu{
+  
+  }
+  ul.submenu>li{
+  }
+  ul.submenu>li:nth-child(3){
+    margin-right: -30px;
+  }
+ul.submenu>li:nth-child(5){
+    margin-right: -50px;
+  }
+  li:nth-child(2) ul.submenu>li{
+    
+  transform: translateX(126px);
+  }
+  ul.submenu>li h3{
+    
+  }
+  ul.submenu>li h3 a{
+    color: #3999bd;
+    font-size: 18px;
+    text-align: center;
+  }
+  ul.submenu>li ul.sublist{
+    
+  }
+  ul.submenu>li ul.sublist li{
+  
+  }
+  ul.submenu>li ul.sublist li a{
+  text-align: center;
+  }
+  ul.submenu>li ul.sublist li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #ccc; 
+    color: blue;
   }
   ul.etcmenu{
     position: absolute;
     top: 8px;
-    right: 0px;
     display: flex;
+    right: calc((100% - 1100px) / 2);
   } 
   ul.etcmenu li a{
     padding:5px 16px;

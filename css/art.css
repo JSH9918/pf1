@@ -1,0 +1,275 @@
+.art h2{
+
+}
+main section .wrap ul.nav li:nth-child(1)::before{
+  content:"01";
+  
+}
+main section .wrap ul.nav li:nth-child(2)::before{
+  content:"02";
+  color: #00a0c6;
+}
+main section .wrap ul.nav li:nth-child(3)::before{
+  content:"03";
+}
+.art .wwtimeline{
+  border: 1px solid #ccc;
+  position: relative;
+}
+.art .wtimeline{
+  
+  overflow: hidden;
+  
+  position: relative;
+  width: 1000px;
+  margin: 0 auto;
+  transform: translateY(15px);
+  z-index: 2;
+}
+.art .wtimeline::before{
+  content: "";
+  width: calc(100% - 40px);
+  border-top:2px solid #ccc;
+  position: absolute;
+  top:30px;
+  left: 20px;
+}
+.art .timeline{
+  
+  width: fit-content;
+  transition: all 1s;
+  flex-wrap: nowrap;
+  position: relative;
+  z-index: 2;
+}
+
+.art .timeline li{
+  width: calc(1000px / 5);
+}
+.art .timeline li a{
+  white-space: nowrap;
+  line-height: 3;
+  margin: 20px 0;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 3;
+}
+.art .timeline li a::before{
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: block;
+  line-height: 1;
+  transform: translateY(5px);
+  z-index:1;
+  position: relative;
+}
+.art .timeline li a:after{
+  transition: all 1s;
+}
+.currentT::before{
+  background-color: blue !important;;
+}
+.currentT::after{
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: block;
+  line-height: 1;
+  background-color: #ccc !important;
+  position: absolute;
+  top: -2px;
+  left: calc(50% - 12.5px);
+}
+.art .control{
+  
+  position: absolute;
+  width: 98%;
+  top: 0;
+  left: 1%;
+  height: 100%;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  transform: translateY(-8px);
+}
+.art .control button{
+  
+  background-color: transparent;
+  border: none;
+  font-size: 40px;
+  transform: scaleY(1.8);
+  color: #999;
+  cursor: pointer;
+}
+.art .timelinegallery{
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  position: relative;
+}
+.art .timelinegallery button{
+  cursor: pointer;
+}
+.art .timelinegallery .intro{
+  position: relative;
+  height: 133px;
+  overflow: hidden;
+  margin: 20px;
+  line-height: 1.2;
+  
+}
+.art .timelinegallery .intro .view{
+  
+  position: absolute;
+  right: 0px;
+  background-color: #2d8fb7;
+  font-size: 20px;
+  color: white;
+  border: none;
+  top: 0;
+}
+.art .timelinegallery .intro h3{
+  
+}
+.art .timelinegallery .intro h3 span{
+  
+}
+.art .timelinegallery .intro p{
+  
+}
+.art .timelinegallery .intro p:before{
+  content: "---";
+  display: block;
+}
+.art .timelinegallery .intro p span{
+  
+}
+.art .timelinegallery figure{
+  
+}
+.art .timelinegallery .fpopup figure .close{
+  
+  position: absolute;
+  top: -20px;
+  right: -30px;
+  width: 40px;
+  height: 30px;
+}
+.art .timelinegallery .fpopup figure{
+  width: 100%;
+}
+.art .timelinegallery .fpopup figure figcaption{
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+}
+.art .timelinegallery .fpopup figure img{
+  
+}
+.timelinegallery .tpopup{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  padding: 40px;
+  box-sizing: border-box;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+.art .timelinegallery gure figcaption{
+  
+}
+.art .timelinegallery figure figcaption span{
+  
+}
+.art .timelinegallery .tpopup .intro{
+  height: 100%;
+  margin: 0;
+}
+.art .timelinegallery .tpopup .close{
+  background-color: #2d8fb7;
+  font-size: 18px;
+  color: white;
+  border: none;
+  order: 2;
+  padding: 5px 15px;
+}
+.art .timelinegallery .tpopup .read{
+  
+  background-color: white;
+  color: #2d8fb7;
+  border: 1px solid #2d8fb7;
+  padding: 5px 15px;
+}
+.art .timelinegallery .tpopup .wbutton{
+  display: flex;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  gap: 20px;
+}
+.art .timelinegallery .tpopup .button{
+  
+}
+.art .timelinegallery .tpopup p{
+ 
+}
+#art .readpopup{
+  position: absolute;
+  width: 1000px;
+  height: auto;
+  border: 1px solid #ccc;
+  z-index: 2;
+  top: calc(70%);
+  left: 22.5%;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+#art .readpopup .rbutton{
+  display: flex;
+  justify-content: right;
+  margin-top: 20px;
+}
+#art .readpopup h3{
+  padding-bottom: 30px;
+  border-bottom: 1px solid #ccc;
+}
+
+#art .readpopup .close{
+ background-color: #2d8fb7;
+ font-size: 20px;
+ color: white;
+ border: none;
+ padding: 5px 15px;
+ cursor: pointer;
+}
+.fpopup{
+  position: absolute;
+  width: 70%;
+  border: 1px solid #ccc;
+  margin: 40px;
+  box-sizing: border-box;
+  top: 0;
+  left: 11%;
+  display: flex;
+  border: 1px solid #ccc;
+}
+.fpopup .left{
+  
+}
+.fpopup .right{
+  
+}

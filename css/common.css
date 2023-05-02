@@ -1,3 +1,7 @@
+body{
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 300;
+}
 .padding30{
     padding:30px 10px;
 }
@@ -13,6 +17,9 @@
 }
 .hide{
     display: none;
+}
+.opacity30{
+    opacity: 0.3;
 }
 .block{
     display:block;
@@ -85,4 +92,23 @@
 }
 .bordertop{
     border-top: 3px solid #1e84b2 !important;
+}
+/* president.art */
+main section .wrap ul.nav {
+  column-gap: 40px;
+  /*! gap: 40px; */
+  margin-bottom: 30px;
+}
+main section .wrap ul.nav li {
+  width: calc(100% / 3);
+}
+
+main section .wrap ul.nav li a {
+  display: block;
+  line-height: 3;
+  border-top: 2px solid #999;
+  margin-top: 25px;
+}
+main section .wrap ul.nav li:nth-child(1) a{
+  border-top-color:  #00a0c6;
 }

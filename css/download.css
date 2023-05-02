@@ -1,0 +1,81 @@
+.download {
+  
+}
+main section .wrap ul.nav li:nth-child(1)::before{
+  content:"01";
+}
+main section .wrap ul.nav li:nth-child(2)::before{
+  content:"02";
+}
+main section .wrap ul.nav li:nth-child(3)::before{
+  content:"03";
+  color: #00a0c6;
+}
+.download .downloadlist {
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  padding: 20px;
+  position: relative;
+}
+.download .downloadlist li {
+  
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+.download .downloadlist li h4 {
+  
+  width: 100%;
+  text-align: center;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-top: 3px solid #2a8db5;
+}
+.download .downloadlist li figure {
+  
+  width: 100%;
+  margin-bottom: 10px;
+}
+.download .downloadlist li figure img {
+  
+}
+.download .downloadlist li button {
+  
+  background-image: url(../img/lifedown_btn.gif);
+  width: 96px;
+  height: 30px;
+  border: none;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+.download .downloadlist li button img{
+  
+}
+.dpopup{
+  
+  position: absolute;
+  top: calc(50% - 20px - 245px);
+  left: calc(50% - 250px);
+  width: 500px;
+}
+.dpopup .close{
+  
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.dpopup figure{
+  
+}
+.dpopup figure img{
+}

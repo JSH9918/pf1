@@ -17,3 +17,6 @@ a{
 ul{
   list-style: none; /* ul의 점표시 없애기 */
 }
+img{
+  width: 100%;
+}

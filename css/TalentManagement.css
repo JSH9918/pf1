@@ -74,35 +74,35 @@
   content:".";
   position: absolute;
   left: -10px;
-  bottom: 2px;
+  bottom: -2px;
   font-size: 30px;
 }
 #TalentManagement section .wrap ul li div p:nth-child(3):before{
   content:".";
   position: absolute;
   left: -10px;
-  bottom: 15px;
+  bottom: 18px;
   font-size: 30px;
 }
 #TalentManagement section .wrap ul li div p:nth-child(4):before{
   content:".";
   position: absolute;
   left: -10px;
-  bottom: 15px;
+  bottom: 18px;
   font-size: 30px;
 }
 #TalentManagement section .wrap ul li div p:nth-child(5):before{
   content:".";
   position: absolute;
   left: -10px;
-  bottom: 2px;
+  bottom: -3px;
   font-size: 30px;
 }
 #TalentManagement section .wrap ul li div p:nth-child(6):before{
   content:".";
   position: absolute;
   left: -10px;
-  bottom: 15px;
+  bottom: 18px;
   font-size: 30px;
 }
 #TalentManagement section .wrap ul li h3 {
